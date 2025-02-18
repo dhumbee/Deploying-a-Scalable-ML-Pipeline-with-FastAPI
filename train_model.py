@@ -38,17 +38,17 @@ cat_features = [
 X_train, y_train, encoder, lb = process_data(
     train, 
     categorical_features=cat_features, 
-    label="salary", 
-    training=True
+    label ="salary", 
+    training = True
     )
 
 X_test, y_test, _, _ = process_data(
     test,
     categorical_features=cat_features,
-    label="salary",
-    training=False,
-    encoder=encoder,
-    lb=lb,
+    label = "salary",
+    training = False,
+    encoder = encoder,
+    lb = lb,
 )
 
 # TODO: use the train_model function to train the model on the training dataset
@@ -83,10 +83,10 @@ for col in cat_features:
             col,
             slicevalue,
             cat_features,
-            label="salary",
-            encoder=encoder,
-            lb=lb,
-            model=model
+            label = "salary",
+            encoder = encoder,
+            lb = lb,
+            model = model
         )
         with open("slice_output.txt", "a") as f:
             print(f"{col}: {slicevalue}, Count: {count:,}", file=f)
